@@ -7,6 +7,7 @@ import {
   WhenDecorator,
   WithContextMenuProps,
   WithSelectionProps,
+  withSelection,
 } from '@patternfly/react-topology';
 import { observer } from 'mobx-react';
 import { PipelineRunNodeData } from '../types';
@@ -60,4 +61,4 @@ const PipelineRunNode: React.FunctionComponent<PipelineRunNodeProps> = ({ elemen
   );
 };
 
-export default observer(PipelineRunNode);
+export default withSelection()(observer(PipelineRunNode));
